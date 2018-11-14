@@ -25,9 +25,9 @@ function LocalStorageHandle(success, error, intent, operation, args) {
             return;
         }
         try {
-            var obj = JSON.parse(item);
-            //console.log("LocalStorage Reading: "+obj);
-            success(obj);
+            // var obj = JSON.parse(item);
+            // success(obj);
+            success(item);
         } catch (err) {
             error(NativeStorageError.JSON_ERROR);
         }
