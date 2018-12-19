@@ -7,7 +7,7 @@ function LocalStorageHandle(success, error, intent, operation, args) {
 
     if (operation.startsWith('put') || operation.startsWith('set')) {
         try {
-            var varAsString = JSON.stringify(variable);
+            var varAsString = typeof(variable) !== 'string' ? JSON.stringify(variable) : variable;
             if (reference === null) {
                 error(NativeStorageError.NULL_REFERENCE);
                 return;
@@ -25,8 +25,7 @@ function LocalStorageHandle(success, error, intent, operation, args) {
             return;
         }
         try {
-            var obj = JSON.parse(item);
-            success(obj);
+            success(item);
         } catch (err) {
             error(NativeStorageError.JSON_ERROR);
         }
