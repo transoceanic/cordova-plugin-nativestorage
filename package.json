@@ -43,7 +43,7 @@
         "jshint": "^2.9.1"
     },
     "bugs":{
-        "url" : "https://github.com/TheCocoaProject/cordova-plugin-nativestorage/issues"
+        "url" : "https://github.com/transoceanic/cordova-plugin-nativestorage/issues"
     },
-    "homepage": "https://github.com/TheCocoaProject/cordova-plugin-nativestorage#README.md"
+    "homepage": "https://github.com/transoceanic/cordova-plugin-nativestorage#README.md"
 }
